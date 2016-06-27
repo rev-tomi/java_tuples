@@ -8,7 +8,7 @@ public class Tuple2Test {
 	@Test
 	public void testTupleAccessors() {
 		// GIVEN
-		Tuple2<String, Integer> tup2 = new Tuple2<>();
+		Tuple2<String, Integer> tup2 = new Tuple2Impl<>();
 		
 		// WHEN
 		tup2.set1("asdf");
@@ -22,7 +22,7 @@ public class Tuple2Test {
 	@Test
 	public void testTupleAccessorsChangedOrder() {
 		// GIVEN
-		Tuple2<String, Integer> tup2 = new Tuple2<>();
+		Tuple2<String, Integer> tup2 = new Tuple2Impl<>();
 		
 		// WHEN
 		tup2.set2(12);
@@ -36,7 +36,7 @@ public class Tuple2Test {
 	@Test
 	public void testTupleConstructor() {
 		// GIVEN
-		Tuple2<String, Integer> tup2 = new Tuple2<>("asdf", 12);
+		Tuple2<String, Integer> tup2 = new Tuple2Impl<>("asdf", 12);
 		
 		// THEN
 		assertEquals("asdf", tup2.get1());
