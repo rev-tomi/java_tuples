@@ -8,6 +8,7 @@ public abstract class TupleBase<T1, T2> implements Tuple2<T1, T2> {
 		values[index] = val;
 	}
 	
+	@SuppressWarnings("unchecked")
 	protected <T> T get(int index) {
 		return (T) values[index];
 	}

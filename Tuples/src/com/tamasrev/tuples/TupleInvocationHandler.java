@@ -13,6 +13,7 @@ public class TupleInvocationHandler implements InvocationHandler {
 		values[index] = val;
 	}
 	
+	@SuppressWarnings("unchecked")
 	protected <T> T get(int index) {
 		return (T) values[index];
 	}
@@ -33,8 +34,6 @@ public class TupleInvocationHandler implements InvocationHandler {
 		boolean isGet = "get".equals(m.group(1));
 		int index = Integer.parseInt(m.group(2)) - 1;
 		
-		
-		// TODO Auto-generated method stub
 		if (isGet) {
 			return get(index);
 		}

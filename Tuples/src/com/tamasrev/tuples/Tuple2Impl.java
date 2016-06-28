@@ -19,6 +19,7 @@ public class Tuple2Impl<T1, T2> implements Tuple2<T1, T2> {
 		values[0] = v;
 	}
 	
+	@SuppressWarnings("unchecked")
 	@Override
 	public T1 get1() {
 		return (T1) values[0];
@@ -29,6 +30,7 @@ public class Tuple2Impl<T1, T2> implements Tuple2<T1, T2> {
 		values[1] = v;
 	}
 	
+	@SuppressWarnings("unchecked")
 	@Override
 	public T2 get2() {
 		return (T2) values[1];
