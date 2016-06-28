@@ -15,4 +15,10 @@ public class TupleProxyTest extends AbstractMutableTupleTest {
 		return (Tuple2<T1, T2>) Proxy.newProxyInstance(getClass().getClassLoader(), new Class[] { Tuple2.class}, tih);
 	}
 
+	@Override
+	protected <T1, T2> Tuple2<T1, T2> createTuple2(T1 v1, T2 v2) {
+		TupleInvocationHandler tih = new TupleInvocationHandler(v1, v2);
+		return createProxyTuple(tih);
+	}
+
 }

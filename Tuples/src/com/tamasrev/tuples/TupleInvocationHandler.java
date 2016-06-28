@@ -11,7 +11,16 @@ public class TupleInvocationHandler implements InvocationHandler {
 
 	private static final Pattern TUPLE_METHOD_PATTERN = Pattern.compile("(get|set)(\\d+)$");
 
-	private final Object[] values = new Object[2];
+	private final Object[] values;
+	
+	public TupleInvocationHandler() {
+		values = new Object[2];
+	}
+	
+	public TupleInvocationHandler(Object... args) {
+		values = new Object[args.length];
+		System.arraycopy(args, 0, values, 0, args.length);
+	}
 	
 	protected void set(Object val, int index) {
 		values[index] = val;
