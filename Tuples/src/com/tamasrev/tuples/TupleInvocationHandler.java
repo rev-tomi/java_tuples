@@ -7,6 +7,10 @@ import java.util.regex.Pattern;
 
 public class TupleInvocationHandler implements InvocationHandler {
 
+	private static final String GET = "get";
+
+	private static final Pattern TUPLE_METHOD_PATTERN = Pattern.compile("(get|set)(\\d+)$");
+
 	private final Object[] values = new Object[2];
 	
 	protected void set(Object val, int index) {
@@ -25,20 +29,19 @@ public class TupleInvocationHandler implements InvocationHandler {
 		}
 		
 		String methodName = method.getName();
-		Pattern methodParser = Pattern.compile("(get|set)(\\d+)$");
-		Matcher m = methodParser.matcher(methodName);
+		Matcher m = TUPLE_METHOD_PATTERN.matcher(methodName);
 		if (!m.find()) {
 			return method.invoke(target, args);
 		}
 		
-		boolean isGet = "get".equals(m.group(1));
+		boolean isGet = GET.equals(m.group(1));
 		int index = Integer.parseInt(m.group(2)) - 1;
 		
 		if (isGet) {
 			return get(index);
 		}
 		set(args[0], index);
-		return null; // returning null for void getter
+		return null; // returning null for void setter
 	}
 
 }
