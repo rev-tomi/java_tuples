@@ -15,6 +15,10 @@ public class Tup {
 	public static <T1, T2, T3> Tuple3<T1, T2, T3> tup3() {
 		return Tup.<Tuple3<T1, T2, T3>>createProxy(Tuple3.class, 3);
 	}
+
+	public static <T1, T2, T3> Tuple3<T1, T2, T3> tup3(T1 v1, T2 v2, T3 v3) {
+		return createProxy(Tuple3.class, v1, v2, v3);
+	}
 	
 	@SuppressWarnings("unchecked")
 	private static <T> T createProxy(Class<? super T> tupleClass, Object... tupleArgs) {
