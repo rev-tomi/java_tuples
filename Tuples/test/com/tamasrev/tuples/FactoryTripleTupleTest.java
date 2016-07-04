@@ -6,7 +6,7 @@ import static org.junit.Assert.assertEquals;
 public class FactoryTripleTupleTest {
 
 	@Test
-	public void testCreateTuple() {
+	public void testTupleWithAccessors() {
 		// GIVEN
 		Tuple3<Integer, String, Long> tup3 = Tup.tup3();
 		
@@ -20,4 +20,6 @@ public class FactoryTripleTupleTest {
 		assertEquals("salala", tup3.get2());
 		assertEquals(new Long(12147483647L), tup3.get3());
 	}
+	
+	
 }
