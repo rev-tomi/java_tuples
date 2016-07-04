@@ -13,8 +13,8 @@ public class TupleInvocationHandler implements InvocationHandler {
 
 	private final Object[] values;
 	
-	public TupleInvocationHandler() {
-		values = new Object[2];
+	public TupleInvocationHandler(int size) {
+		values = new Object[size];
 	}
 	
 	public TupleInvocationHandler(Object... args) {

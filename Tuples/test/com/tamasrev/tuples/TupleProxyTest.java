@@ -6,7 +6,7 @@ public class TupleProxyTest extends AbstractMutableTupleTest {
 
 	@Override
 	protected <T1, T2> Tuple2<T1, T2> createTuple2() {
-		TupleInvocationHandler tih = new TupleInvocationHandler();
+		TupleInvocationHandler tih = new TupleInvocationHandler(2);
 		return createProxyTuple(tih);
 	}
 
