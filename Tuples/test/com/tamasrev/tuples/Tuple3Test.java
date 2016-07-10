@@ -3,7 +3,7 @@ package com.tamasrev.tuples;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
-public class FactoryTripleTupleTest {
+public class Tuple3Test {
 
 	@Test
 	public void testTupleWithAccessors() {

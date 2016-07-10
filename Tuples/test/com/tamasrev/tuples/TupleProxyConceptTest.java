@@ -2,7 +2,7 @@ package com.tamasrev.tuples;
 
 import java.lang.reflect.Proxy;
 
-public class TupleProxyConceptTest extends AbstractMutableTupleTest {
+public class TupleProxyConceptTest extends AbstractTupleTest {
 
 	@Override
 	protected <T1, T2> Tuple2<T1, T2> createTuple2() {

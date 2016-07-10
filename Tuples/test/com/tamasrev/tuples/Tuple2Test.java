@@ -1,6 +1,6 @@
 package com.tamasrev.tuples;
 
-public class FactoryMutableProxyTest extends AbstractMutableTupleTest {
+public class Tuple2Test extends AbstractTupleTest {
 
 	@Override
 	protected <T1, T2> Tuple2<T1, T2> createTuple2() {

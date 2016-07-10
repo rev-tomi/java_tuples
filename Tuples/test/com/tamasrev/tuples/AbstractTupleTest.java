@@ -4,7 +4,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-public abstract class AbstractMutableTupleTest {
+public abstract class AbstractTupleTest {
 
 	@Test
 	public void testTupleAccessors() {
