@@ -1,6 +1,6 @@
 package com.tamasrev.tuples;
 
-public class Tuple2Impl<T1, T2> implements Tuple2<T1, T2> {
+class Tuple2Impl<T1, T2> implements Tuple2<T1, T2> {
 
 	private Object[] values;
 	

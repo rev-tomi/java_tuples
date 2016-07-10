@@ -5,7 +5,7 @@ import java.lang.reflect.Method;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class TupleInvocationHandler implements InvocationHandler {
+class TupleInvocationHandler implements InvocationHandler {
 
 	private static final String GET = "get";
 
