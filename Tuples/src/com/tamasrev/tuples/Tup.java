@@ -19,6 +19,14 @@ public class Tup {
 	public static <T1, T2, T3> Tuple3<T1, T2, T3> tup3(T1 v1, T2 v2, T3 v3) {
 		return createProxy(Tuple3.class, v1, v2, v3);
 	}
+
+	public static <T1, T2, T3, T4> Tuple4<T1, T2, T3, T4> tup4() {
+		return Tup.<Tuple4<T1, T2, T3, T4>>createProxy(Tuple4.class, 4);
+	}
+
+	public static <T1, T2, T3, T4> Tuple4<T1, T2, T3, T4> tup4(T1 v1, T2 v2, T3 v3, T4 v4) {
+		return createProxy(Tuple4.class, v1, v2, v3, v4);
+	}
 	
 	@SuppressWarnings("unchecked")
 	private static <T> T createProxy(Class<? super T> tupleClass, Object... tupleArgs) {

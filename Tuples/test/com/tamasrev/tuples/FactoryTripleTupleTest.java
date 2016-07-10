@@ -21,7 +21,6 @@ public class FactoryTripleTupleTest {
 		assertEquals(new Long(12147483647L), tup3.get3());
 	}
 	
-
 	@Test
 	public void testPrepopulatedTuple() {
 		// GIVEN
