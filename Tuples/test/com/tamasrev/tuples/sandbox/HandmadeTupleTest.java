@@ -1,4 +1,8 @@
-package com.tamasrev.tuples;
+package com.tamasrev.tuples.sandbox;
+
+import com.tamasrev.tuples.AbstractMutableTupleTest;
+import com.tamasrev.tuples.Tuple2;
+import com.tamasrev.tuples.sandbox.Tuple2Impl;
 
 public class HandmadeTupleTest extends AbstractMutableTupleTest {
 

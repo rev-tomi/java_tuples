@@ -1,4 +1,6 @@
-package com.tamasrev.tuples;
+package com.tamasrev.tuples.sandbox;
+
+import com.tamasrev.tuples.Tuple2;
 
 class Tuple2Impl<T1, T2> implements Tuple2<T1, T2> {
 
