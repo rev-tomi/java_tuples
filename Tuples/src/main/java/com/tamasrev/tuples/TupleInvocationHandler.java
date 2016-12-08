@@ -33,7 +33,7 @@ class TupleInvocationHandler implements InvocationHandler {
 	
 	@Override
 	public Object invoke(Object target, Method method, Object[] args) throws Throwable {
-		if (!(target instanceof Tuple2)) {
+		if (!(target instanceof Tuple2)) { // this is the parent of all other tuples
 			return method.invoke(target, args);
 		}
 		

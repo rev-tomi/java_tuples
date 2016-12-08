@@ -1,7 +1,0 @@
-This project demonstratest that in Java, Object Arrays are the ultimate generic Tuples we've been missing so long.
-
-You can read more on Arrays and types here: http://wiki.c2.com/?JavaArraysBreakTypeSafety
-The idea came from this Stack Overflow question: http://stackoverflow.com/questions/38047298/hashmapinteger-string-how-is-it-taking-values-string-integer
-This question demonstrate how you can bypass the Java Generics and store _anything_ in a typed collection.
-Then, you know, why not do the same with the simplest thing possible? I.e. those are Arrays.
-
